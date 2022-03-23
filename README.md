@@ -11,6 +11,7 @@ This is only for Windows OS.
 
 ### Download this repository
 > Make sure you are in the C:\ root folder when performing this git clone. This is because the environments were set up at C:\ folder.
+
 ```git clone --recursive https://github.com/jeremyng123/scanning_cobalt_strike.git```
 
 Note the use of `--recursive` because of the other submodules. The 2 submodules I have added to this repository are:
