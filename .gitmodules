@@ -1,0 +1,6 @@
+[submodule "1768"]
+	path = 1768
+	url = https://github.com/DidierStevens/DidierStevensSuite.git
+[submodule "Apr4h"]
+	path = Apr4h
+	url = https://github.com/Apr4h/CobaltStrikeScan
