@@ -1,6 +1,4 @@
 @ECHO OFF
-
-
 :: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions

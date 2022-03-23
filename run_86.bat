@@ -1,5 +1,7 @@
 @ECHO OFF
-
+ECHO ==========================
+ECHO SCANNING LIVE MEMORY
+ECHO ============================
 
 :: BatchGotAdmin
 :-------------------------------------
@@ -28,10 +30,6 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-:-------------------------------------- 
-for /f "tokens=1,*" %%i in ('fsutil fsinfo drives') do (
-  ECHO ==========================
-  ECHO SCANNING FILES FROM %%j
-  ECHO ============================
-  cmd /k ".\env64\Scripts\activate.bat & python 1768\1768.py --recursedir %%j"
-)
+:--------------------------------------  
+
+.\exe\CobaltStrikeScan_x86.exe -p > Apr4h_out.txt

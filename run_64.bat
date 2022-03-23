@@ -32,4 +32,4 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------  
 
-.\exe\CobaltStrikeScan_x86.exe -p
+.\exe\CobaltStrikeScan_x64.exe -p > Apr4h_out.txt

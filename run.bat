@@ -1,8 +1,5 @@
+@REM https://www.windows-commandline.com/check-windows-32-bit-64-bit-command-line/#comment-body-45646
 @ECHO OFF
-ECHO ==========================
-ECHO SCANNING LIVE MEMORY
-ECHO ============================
-
 :: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions
@@ -30,6 +27,20 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-:--------------------------------------  
+:-------------------------------------- 
 
-.\exe\CobaltStrikeScan_x64.exe -p
+ECHO ==========================
+ECHO Running scan on your machines...
+ECHO ============================
+@REM ECHO %PROCESSOR_ARCHITECTURE%
+IF /I "%PROCESSOR_ARCHITECTURE%" EQU "X86" (
+    ECHO ==========================
+    ECHO This is a 32-bit Architecture
+    ECHO ============================
+    cmd /k ".\run_86.bat & .\run_86_static.bat"
+) ELSE (
+    ECHO ==========================
+    ECHO This is a 64-bit Architecture
+    ECHO ============================
+    cmd /k ".\run_64.bat & .\run_64_static.bat"
+)
